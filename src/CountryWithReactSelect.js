@@ -7,7 +7,7 @@ const options = countryjson.map((c) => ({value: c.country, label: c.country}));
 export function CountryWithReactSelect() {
     return (
         <div>
-            <Select options={options} isMulti />
+            <Select id="react-select" options={options} isMulti />
         </div>
     )
 }

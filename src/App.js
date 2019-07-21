@@ -18,8 +18,8 @@ function App() {
   return (
         <div className="container">
             <header>
-                <h1 className="m-b-50">Choosen Value</h1>
-                <select value="" data-placeholder="Choose a Country..." className="name" tabIndex="2">
+                <h1 className="m-b-50">DropDown with chosen library</h1>
+                <select id="choosenlibrary-select" value="" data-placeholder="Choose a Country..." className="name" tabIndex="2">
                     <option value=""></option>
                 {countryjson && countryjson.map((c, index) => {
                     return <option key={index} value={c.country}>{c.country}</option>
@@ -27,8 +27,10 @@ function App() {
                 }
                 </select>
                 <hr />
+                <h1 className="m-b-50">DropDown with simple html select</h1>
                 <CountryWithoutChosen />
                 <hr />
+                <h1 className="m-b-50">DropDown with React Select library</h1>
                 <CountryWithReactSelect />
             </header>
         </div>
